@@ -1,0 +1,46 @@
+{
+  "name": "react-antd-demo-ts",
+  "version": "1.0.0",
+  "description": "这是一个typescript项目框架，包含react,antd,babel,webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node-dev --respawn --transpileOnly src/index.ts",
+    "style": "run-s style:**",
+    "style:prettier": "prettier --write \"src/**/*.ts\"",
+    "style:lint": "tslint -p tsconfig.json -c tslint.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jason1iu/react-antd-demo-ts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jason1iu/react-antd-demo-ts/issues"
+  },
+  "homepage": "https://github.com/Jason1iu/react-antd-demo-ts#readme",
+  "devDependencies": {
+    "@types/node": "^11.13.0",
+    "cz-conventional-changelog": "^2.1.0",
+    "husky": "^1.3.1",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.16.4",
+    "ts-node-dev": "^1.0.0-pre.32",
+    "tslint": "^5.15.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.4.2",
+    "validate-commit-msg": "^2.14.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn style",
+      "commit-msg": "validate-commit-msg"
+    }
+  }
+}
